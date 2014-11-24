@@ -68,17 +68,47 @@ header {
   padding-bottom: 25px;
 }
 
-         .left 
+                 .left 
          {
                 position: absolute;
                 left: 0px;
                 width: 300px;
-                background-color: #e7e7e7;
+                background-color: #b0e0e6;
 
                 width: 150px;
-                height: 150px;
+                height: 1000px;
                 overflow: scroll;
             }
+            
+             .center
+        {
+            
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            background-color: #b0e0e6;
+
+            width: 1000px;
+            height: 1000px;
+            /*overflow: scroll;*/
+            overflow-y: scroll;
+
+        }
+
+         .right
+        {
+            position: absolute;
+                right: 0px;
+                width: 300px;
+                /*background-color: #b0e0e6;*/
+
+                width: 150px;
+                height: 1000px;
+                overflow: scroll;
+             
+        }
+            
+            
 
 header h1 {
   font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif; font-weight: 900;
