@@ -1,0 +1,15 @@
+//1. Declare variables
+        int firstNumber;
+        int secondNumber;
+        int result;
+        //2. get values for the variables
+        firstNumber = Convert.ToInt32(txtFirstNumber.Text);
+        Trace.Warn("firstNumber = " + firstNumber);
+
+        secondNumber = Convert.ToInt32(txtSecondNumber.Text);
+        Trace.Warn("secondNumber = " + secondNumber);
+        //3. calculate
+        result = firstNumber + secondNumber;
+        //4. display
+        lblDisplayCalculation.Text = "<b>" + "Result:" + "" + "" + result.ToString() + "</b>";
+        Trace.Warn("result = " + result);
