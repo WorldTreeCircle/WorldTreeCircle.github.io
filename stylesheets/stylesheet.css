@@ -69,6 +69,17 @@ header {
   padding-bottom: 25px;
 }
 
+                         .header_left
+        {
+            font-weight:bold;
+            font-size: 20pt;
+            /*position: absolute;*/
+                left: 25px;
+                width: 300px;
+                background-color: #b0e0e6;
+
+        }
+                 
                  .left 
          {
                 position: absolute;
