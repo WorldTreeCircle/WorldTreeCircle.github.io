@@ -3,6 +3,12 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     // <script src="JS.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
@@ -13,6 +19,28 @@
     <![endif]-->
     <title>World Tree Circle</title>
   </head>
+ <script type="text/C#">
+  protected void butAdd_Click(object sender, EventArgs e)
+    {
+        //1. Declare variables
+        decimal firstNumber;
+        decimal secondNumber;
+        decimal result;
+        //2. get values for the variables
+        firstNumber = Convert.ToDecimal(txtFirstNumber.Text);
+        Trace.Warn("firstNumber = " + firstNumber);
+
+        secondNumber = Convert.ToDecimal(txtSecondNumber.Text);
+        Trace.Warn("secondNumber = " + secondNumber);
+        //3. calculate
+        result = firstNumber + secondNumber;
+        //4. display
+        lblDisplayCalculation.Text = "<b>" + "Result:" + "" + "" + result.ToString() + "</b>";
+        Trace.Warn("result = " + result);
+
+    }
+  </script>
+  
       <script type="text/javascript">
         
         //Setup event handlers
