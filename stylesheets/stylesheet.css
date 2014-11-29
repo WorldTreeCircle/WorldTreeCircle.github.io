@@ -56,15 +56,6 @@ body {
   color: #6d6d6d;
 }
 
-    .TxtBox
-    {
-        color:#000000;
-        background: #FFFFFF;
-        font-size: 12pt;
-        font-weight:initial;
-        border:1px solid #848484;
-        width:150px;
-    }
 
 a {
   color: #d5000d;
@@ -140,9 +131,12 @@ header h2 {
   background: transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat;
   min-height: 595px;
 }
-
+/*
+* */ 
 .inner {
-  width: 620px;
+	width: 450px;
+ /* width: 620px;
+ **/
   margin: 0 auto;
 }
 
