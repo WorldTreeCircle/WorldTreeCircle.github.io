@@ -56,6 +56,16 @@ body {
   color: #6d6d6d;
 }
 
+    .TxtBox
+    {
+        color:#000000;
+        background: #FFFFFF;
+        font-size: 12pt;
+        font-weight:initial;
+        border:1px solid #848484;
+        width:150px;
+    }
+
 a {
   color: #d5000d;
 }
