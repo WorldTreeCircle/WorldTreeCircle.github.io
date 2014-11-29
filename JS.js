@@ -46,7 +46,7 @@
         {
             console.log("Inside displayHelloWorldAgain function");
 
-            document.getElementById('divDisplay2').innerHTML = "<h2>Hello World Again!</h2>";
+            document.getElementById('divDisplay2').innerHTML = "<h2>Hello World Again!!!!!!!!2</h2>";
         }
 
     </script>
