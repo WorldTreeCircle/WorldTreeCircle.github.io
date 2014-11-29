@@ -107,6 +107,17 @@ header {
 
         }
 
+                    .header_right
+        {
+            font-weight:bold;
+            font-size: 20pt;
+            /*position: absolute;*/
+                right: 25px;
+                width: 300px;
+                background-color: #e7e7e7;
+
+        }
+
          .right
         {
             position: absolute;
