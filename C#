@@ -1,12 +1,12 @@
 //1. Declare variables
-        int firstNumber;
-        int secondNumber;
-        int result;
+        decimal firstNumber;
+        decimal secondNumber;
+        decimal result;
         //2. get values for the variables
-        firstNumber = Convert.ToInt32(txtFirstNumber.Text);
+        firstNumber = Convert.ToDecimal(txtFirstNumber.Text);
         Trace.Warn("firstNumber = " + firstNumber);
 
-        secondNumber = Convert.ToInt32(txtSecondNumber.Text);
+        secondNumber = Convert.ToDecimal(txtSecondNumber.Text);
         Trace.Warn("secondNumber = " + secondNumber);
         //3. calculate
         result = firstNumber + secondNumber;
