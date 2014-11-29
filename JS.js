@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ex 7 - Javascript - Hello World Again</title>
+    <title>Ex 7 - Javascript - Hello World of Tomorrow!!!</title>
     <script type="text/javascript">
         
         //Setup event handlers
