@@ -89,8 +89,8 @@ header {
                width: 500px;
                 background-color: #e7e7e7;
 
-              /*  width: 150px; */
-              width: 500px;
+                width: 150px; 
+           /*   width: 500px; */
                 height: 1000px;
                 overflow: scroll;
             }
@@ -104,7 +104,8 @@ header {
            width: 300px;
             background-color: #e7e7e7;
 
-          /*  width: 1000px; */
+            width: 1000px; 
+           /* width: 750px; */
             height: 1000px;
             /*overflow: scroll;*/
             overflow-y: scroll;
@@ -131,8 +132,8 @@ header {
               width: 500px;
                 background-color: #e7e7e7;
 
-            /*    width: 150px; */
-            width: 500px;
+               width: 150px; 
+           /*   width: 500px; */
                 height: 1000px;
                 overflow: scroll;
              
