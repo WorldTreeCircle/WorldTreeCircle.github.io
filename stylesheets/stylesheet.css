@@ -90,6 +90,7 @@ header {
                 background-color: #e7e7e7;
 
               /*  width: 150px; */
+              width: 500px;
                 height: 1000px;
                 overflow: scroll;
             }
@@ -131,6 +132,7 @@ header {
                 background-color: #e7e7e7;
 
             /*    width: 150px; */
+            width: 500px;
                 height: 1000px;
                 overflow: scroll;
              
