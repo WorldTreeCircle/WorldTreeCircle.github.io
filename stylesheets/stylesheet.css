@@ -85,7 +85,8 @@ header {
          {
                 position: absolute;
                 left: 0px;
-                width: 300px;
+               /* width: 300px; */
+               width: 500px;
                 background-color: #e7e7e7;
 
                 width: 150px;
@@ -124,7 +125,8 @@ header {
         {
             position: absolute;
                 right: 0px;
-                width: 300px;
+              /*  width: 300px; */
+              width: 500px;
                 background-color: #e7e7e7;
 
                 width: 150px;
@@ -158,7 +160,7 @@ header h2 {
 /*
 * */ 
 .inner {
-	width: 450px; 
+/*	width: 450px; */
 
   width: 620px; 
   
