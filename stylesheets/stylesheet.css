@@ -86,11 +86,11 @@ header {
                 position: absolute;
                 left: 0px;
                /* width: 300px; */
-               width: 500px;
+               width: 400px;
                 background-color: #e7e7e7;
 
              /*   width: 150px; */
-              width: 250px; 
+              width: 175px; 
                 height: 1000px;
                 overflow: scroll;
             }
@@ -129,11 +129,11 @@ header {
             position: absolute;
                 right: 0px;
               /*  width: 300px; */
-              width: 500px;
+              width: 400px;
                 background-color: #e7e7e7;
 
              /*  width: 150px; */
-              width: 250px; 
+              width: 175px; 
                 height: 1000px;
                 overflow: scroll;
              
