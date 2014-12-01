@@ -99,7 +99,8 @@ header {
             
             margin-left: auto;
             margin-right: auto;
-            width: 500px;
+           /* width: 500px; */
+           width: 300px;
             background-color: #e7e7e7;
 
             width: 1000px;
