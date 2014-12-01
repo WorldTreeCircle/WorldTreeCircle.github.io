@@ -156,9 +156,10 @@ header h2 {
 /*
 * */ 
 .inner {
-/*	width: 450px;
-**/
-  width: 450px;
+/*	width: 450px; */
+
+  width: 620px;
+  
  
   margin: 0 auto;
 }
@@ -428,9 +429,9 @@ footer a:hover {
     display: none;
   }
   .inner {
-   /* width: 94%; 
-   */
-   width: 45;
+    width: 94%; 
+   
+  /* width: 45%; */
     margin: 0 auto;
   }
 }
