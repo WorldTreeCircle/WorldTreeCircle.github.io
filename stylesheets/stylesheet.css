@@ -104,8 +104,8 @@ header {
            width: 300px;
             background-color: #e7e7e7;
 
-           /* width: 1000px;  */
-            width: 750px; 
+            width: 1000px;  
+            /* width: 750px;  */
             height: 1000px;
             /*overflow: scroll;*/
             overflow-y: scroll;
