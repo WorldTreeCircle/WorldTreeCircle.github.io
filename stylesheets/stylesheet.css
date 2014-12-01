@@ -75,7 +75,8 @@ header {
             font-size: 20pt;
             /*position: absolute;*/
                 left: 25px;
-                width: 300px;
+              /*  width: 300px; */
+              width: 500px;
                 background-color: #e7e7e7;
 
         }
@@ -113,7 +114,8 @@ header {
             font-size: 20pt;
             /*position: absolute;*/
                 right: 25px;
-                width: 300px;
+               /* width: 300px; */
+               width: 500;
                 background-color: #e7e7e7;
 
         }
