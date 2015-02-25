@@ -41,12 +41,21 @@ input[type=text] {
     text-align: center;
 }
 
-.loginTxt {
+#sub_content {
     position: absolute;
     top: 65%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 75px;
     display: none;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    padding: 20px;
+    text-align: center;
 }

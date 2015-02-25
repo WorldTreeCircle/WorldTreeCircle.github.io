@@ -1,15 +1,22 @@
 ﻿$(document).ready(function () {
     //Create table with login textbox
-    var content = $("<table id=tblLogin><tr><td><input id='txtEmail' type='text' value='Email' /></td></tr></table>").addClass('loginTxt');
+    var content = "<tr colspan='2'><td><input id='txtEmail' name='Email' type='text' value='Email' /></td></tr><tr><td colspan='2'><button><h3>Login or Signup</h3></button></td></tr>";
     //Move imgLogo from center of page to top
-    $('#imgLogo').animate({ top: '25%' }, "slow", function () {
-        $('#imgLogo').after(content); //insert hidden login textbox
-        $('#tblLogin').fadeIn("slow"); //fade login textbox into view
+    $('#imgLogo').delay(500).animate({ top: '25%' }, "slow", function () {
+        $('#sub_content').fadeIn("slow"); //fade login form into view
     });
 
     //Clear default text on textbox focus
-    $('input').focus(function () {
-        console.log("txtEmail has focus.");
-        $('#txtEmail').val('');
+    $("input[type=text]").focus(function () {
+        if(this.value == this.name) {
+            $(this).val('');
+        }
+    })
+
+    //Check to see if email is registered
+    $('#butLoginSignup').click(function () {
+
+        //Insert code to query database for email
+
     })
 });
