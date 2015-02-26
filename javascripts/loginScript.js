@@ -13,6 +13,16 @@
         }
     })
 
+    //Insert default text when textbox loses focus and is empty
+    $("input[type=text]").blur(function () {
+        if (this.value == '') {
+            $(this).val(this.name);
+        }
+    })
+
+    //Enable butLoginSignup when email is entered
+    
+
     //Check to see if email is registered
     $('#butLoginSignup').click(function () {
 
