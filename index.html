@@ -1,7 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
 <head>
-    <title>World Tree Circle</title>
     <meta charset='utf-8'>
 
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -16,10 +14,86 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+    <title>World Tree Circle</title>
 
 </head>
 
+
+
+
+<script type="text/javascript">
+
+    //Setup event handlers
+    window.addEventListener("load", setupEventHandlers, false);
+
+    //-------------------------------
+    // name: setupEventHandlers()
+    //-------------------------------
+    function setupEventHandlers()
+    {
+
+        console.log("Inside setupEventHandlers function that is fired on the window load event");
+
+        //Event handlers
+        var HelloWorldButtonReference = document.getElementById("butHelloWorld");
+        HelloWorldButtonReference.addEventListener("click", displayHelloWorld, false);
+
+
+
+
+
+        var HelloWorldAgainButtonReference = document.getElementById("butHelloWorldAgain");
+        HelloWorldAgainButtonReference.addEventListener("click", displayHelloWorldAgain, false);
+    }
+
+
+    //------------------------------------------------------
+    // name: displayHelloWorld()
+    // description: Function called when button is clicked
+    //------------------------------------------------------
+    function displayHelloWorld()
+    {
+        console.log("Inside displayHelloWorld function");
+
+        document.getElementById('divDisplay1').innerHTML = "<h1>Hello World!</h1>";
+    }
+
+
+
+
+    function displayHelloWorldAgain()
+    {
+        console.log("Inside displayHelloWorldAgain function");
+
+        document.getElementById('divDisplay2').innerHTML = "<h2>Hello World Again!</h2>";
+    }
+
+
+    /* <script type="text/javascript" charset="utf-8">
+       $(document).ready(function(){
+           $("a[rel^='prettyPhoto']").prettyPhoto();
+       });
+       */
+
+    src="/jquery/jquery-1.3.2.min.js"></script>
+
+<script src="jquery.plug-in.js" type="text/javascript">
+</script>
+
+<script src="custom.js" type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function()
+    {
+        $("a[rel^='prettyPhoto']").prettyPhoto();
+
+    });
+
+
+</script>
+
+<html>
 <body>
 
     <h3>Personal Feed:</h3>
@@ -57,11 +131,111 @@
 
                         Welcome to World Tree Circle!
                     </p>
-                    </section>
+
+
+                    <p></p>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/iUG7NJ6bckU?list=UUCfkKCK-AJ6QVmcWGLwPbiw"
+                                        frameborder="0" allowfullscreen></iframe>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table border="0">
+                        <tr>
+                            <td>
+                                <iframe width="250" height=200" src="//www.youtube.com/embed/xlfuD1Xdfj8" frameborder="0" allowfullscreen></iframe>
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                    This is a video about The Pride of the Mountains marching Band from WCU in the Macy's Day Parade!
+                                </div>
+                            </td>
+
+                            <td>
+                                <img src="http://www.maconnews.com/images/stories/2011/09152011/wcufootball.jpg" alt "WCU football(test image)"
+                                     style="width:250px;height:200px"></a>
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                    The Western Carolina University football team!
+                                </div>
+                            </td>
+
+                            <td>
+                                <img src="http://www.maconnews.com/images/stories/2011/09152011/wcufootball.jpg" alt "WCU football 2 (test image)"
+                                     style="width:250px;height:200px"></a>
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <img src="http://cdnvideo.dolimg.com/cdn_assets/5d6c9f39173c18acd79dc0d5ca5c216151cc1e21.jpeg" alt="Star Wars"
+                                     style="width:250px;height:200px">
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                    The next installment in the beloved Star Wars franchise has recently released a trailer. The movie will come out December of 2015.
+                                </div>
+                            </td>
+                            <td>
+                                <iframe width="250" height="200" src="//www.youtube.com/embed/OMOVFvcNfvE" frameborder="0" allowfullscreen></iframe>
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                    Here is the new Star Wars VII - The Force Awakens trailer!
+                                </div>
+                            </td>
+                            <td>
+                                <img src="http://cdn.screenrant.com/wp-content/uploads/hobbit-battle-five-armies-banner-thranduill-banner.jpg" alt="TheHobbit"
+                                     style="width:250px;height:200px">
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                    This is the last installment in the Hobbit Triology.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <a href="http://worldtreecircle.com/product/wtc-organic-t-shirts/">
+                                    <img src="http://worldtreecircle.com/wp-content/uploads/2014/10/T-shirt-Mock-up-2.jpg" alt="WTC Shirts for Sale"
+                                         style="width:250px;height:200px">
+                                </a>
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                    These are shirts that are being sold by World Tree Circle to help with their website and also Clarkes run!
+                                </div>
+                            </td>
+
+                            <td>
+                                <img src="http://1.bp.blogspot.com/-hfWgpge3F-w/TcS4s48yJzI/AAAAAAAAC1k/Zlnemi4wMm4/s1600/liver.jpg" alt="Livermush"
+                                     style="width:250px;height:200px">
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                    Livermush is a regional food that to most sounds disgusting, but for some southern states such as North Carolina it's delicious.
+                                </div>
+                            </td>
+
+                            <td>
+                                <img src="http://www.wcu.edu/WebGraphics/studentlife_wallpaper_Medium_4.jpg" alt="WCU"
+                                     style="width:250px;height:200px">
+                                <div style="width:250px;height:75px;border:1px solid black;">
+                                    Western Carolina University will hold its graduation ceremony on Dec. 13th.
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+
 
                     <h3>
                         <a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>
                     </h3>
+                    <p></p>
+                    <h3>
+
+
+
             </div>
         </div>
     </div>
