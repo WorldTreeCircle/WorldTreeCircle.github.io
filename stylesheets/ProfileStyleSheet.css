@@ -1,0 +1,60 @@
+﻿#Header {
+    background-color:green;
+    color:black;
+    text-align:center;
+    padding:5px;
+}
+#Body {
+    background-image: url(~/WorldTreeCircle.github.io/images/WTC-black.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+}
+#LeftMargin {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#MainFeed {
+    width:480px;
+    float:left;
+    padding:10px;
+    height:auto;
+    opacity:0.6;
+}
+#MessageCenterPanel {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:600px;
+    width:200px;
+    float:right;
+    padding:5px;
+    margin-left: 0px;
+}
+#QandAPanel {
+
+    height:120px;
+}
+#ScavengerHuntPanel {
+
+    height:120px;
+}
+#CommunityPanel {
+
+    height:120px;
+}
+#CharitySectionPanel {
+
+    height:120px;
+}
+#SunRaysPanel {
+
+    height:120px;
+}
+#AdsPanel {
+
+    height:120px;
+}
