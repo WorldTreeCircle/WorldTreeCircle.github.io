@@ -1,4 +1,7 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="About WTC.aspx.cs" Inherits="_Default" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
 
 <!-- Set character set -->
     <meta charset="utf-8">
@@ -25,12 +28,6 @@
     <script src="javascripts/loginScript.js" type="text/javascript"></script>
     <script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
     <!-- End JavaScript -->
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    
 
     <title ><center>About WTC</center></title>
 </head>
