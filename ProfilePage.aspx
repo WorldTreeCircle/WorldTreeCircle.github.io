@@ -17,7 +17,7 @@
     
 
     <div id="Header">
-        <h1>World Tree Circle</h1>
+        <h1>World Tree Circle Is cool</h1>
     </div>
             <div id="LeftMargin">
                  Profile Pic<br />
