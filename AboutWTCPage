@@ -1,0 +1,57 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="About WTC.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+
+    <title ><center>About WTC</center></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="center">
+            <div id="container">
+                <div class="inner">
+                    <header>
+                        <h1 style="text-align: center">About World Tree Circle</h1>
+                        <h2></h2>
+                    </header>
+
+                    <div>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            World Tree Circle is a grassroots organization that is dedicated 
+                            to connecting people on a global scale through news channels and 
+                            social media.  It’s an international non-profit organization.  
+                            World Tree Circle wishes to create a social media website that will 
+                            feature user profiles, an active news feed that can be searched 
+                            through and updated, a dynamic question and answer forum where any 
+                            type of question can be asked, as well as a unique translation tool 
+                            that allows users to contribute to the translation for any language 
+                            they know and then monitored by moderators to make sure that 
+                            translation is correct and swift.
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            World Tree Circle’s website will provide users with a place to interact, 
+                            learn, and have fun on a global scale. It will be a place that people 
+                            can share interesting ideas and expand their own ideas.  World Tree 
+                            Circle is unique in that it will provide user-friendly tools to 
+                            communicate across language and cultural barriers. The site will be open 
+                            sourced in order to provide the most rapid responses to user feedback 
+                            that the site will acquire. To do this we are constantly gathering data 
+                            on existing social media websites as well as gathering our own data to 
+                            create a site that caters to everyone. We created a survey to be sent out, 
+                            looked at trends, investigated other popular social media, as well as 
+                            constructed a focus group to help us gather the necessary information to 
+                            build an optimal website.  We continue to work with the local college, 
+                            Western Carolina University, as a part of this process.                      
+                        </p>
+                        <p><iframe src="//www.youtube.com/embed/iUG7NJ6bckU" width="777" height="437" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+                    </div>
+                </div>
+    </form>
+</body>
+</html>
