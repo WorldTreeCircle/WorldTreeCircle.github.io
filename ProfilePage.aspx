@@ -6,7 +6,7 @@
 <head runat="server">
     <title>World Tree Circle</title>
 
-    <link href="stylesheets/ProfileStyleSheet.css" rel="stylesheet" />
+    <link href="stylesheets/ProfileStyleSheet.css" rel="stylesheet" type="text/css" />
 </head>
 
 
