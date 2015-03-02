@@ -20,7 +20,7 @@
         <h1>World Tree Circle</h1>
     </div>
             <div id="LeftMargin">
-                 Profile Pic<br />
+                 Profile P<br />
                        Bio? <br />
                  Extra Stuff<br />
             </div>
