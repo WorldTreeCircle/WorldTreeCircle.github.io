@@ -6,7 +6,7 @@
 <head runat="server">
     <title>World Tree Circle</title>
 
-    <link href="stylesheets/ProfileStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/ProfileStyleSheet.css" rel="stylesheet" />
 </head>
 
 
@@ -20,7 +20,7 @@
         <h1>World Tree Circle</h1>
     </div>
             <div id="LeftMargin">
-                 Profile P<br />
+                 Profile Pic<br />
                        Bio? <br />
                  Extra Stuff<br />
             </div>
