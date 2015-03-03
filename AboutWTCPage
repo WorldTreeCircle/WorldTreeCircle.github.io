@@ -73,11 +73,8 @@
                             Western Carolina University, as a part of this process.                      
                         </p>
                             <div class="embed-responsive embed-responsive-16by9">
-                                <video class="embed-responsive-item" src="www.youtube.com/embed/iUG7NJ6bckU?list=UUCfkKCK-AJ6QVmcWGLwPbiw"></video>
+                                <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/iUG7NJ6bckU?list=UUCfkKCK-AJ6QVmcWGLwPbiw"></iframe>
                             </div>
-                            
-                            <iframe width="1366" height="643" src="https://www.youtube.com/embed/iUG7NJ6bckU?list=UUCfkKCK-AJ6QVmcWGLwPbiw%22" frameborder="0" allowfullscreen></iframe>
-                            
                     </div>
                 </div>
 </body>
