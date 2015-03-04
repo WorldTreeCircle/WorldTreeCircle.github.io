@@ -11,17 +11,32 @@
 
     //Check to see if email is registered
     $('#butLoginSignup').click(function loginOrSignup () {
-        var email = $('#txtEmail').val();
-        //Insert code to query database for email
-        var emailIsValid = false;
-        if (emailIsValid) {
-            //ask for password
-            console.log("email is valid");
+        //Query database for email
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        else {
-            $("<div class='form-group'><label class='control-label sr-only' for='txtPasswd'>Password:</label><input id='txtPasswd' name='Password' type='password' placeholder='Password' /></div>").insertAfter('#txtEmail');
-            $("#txtPasswd").addClass("form-control text-center input-lg center-block");
-            $('#butLoginSignup').text("Signup");
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if (xmlhttp.responseText) {
+                    //ask for password
+                    $("<div class='form-group'><label class='control-label sr-only' for='txtPasswd'>Password:</label><input id='txtPasswd' name='Password' type='password' placeholder='Password' /></div>").insertAfter('#txtEmail');
+                    $("#txtPasswd").addClass("form-control text-center input-lg center-block");
+                    $('#butLoginSignup').text("Login");
+                }
+                else {
+                    //Display Signup information
+                    $("<div class='form-group'><label class='control-label sr-only' for='txtPasswd'>Password:</label><input id='txtPasswd' name='Password' type='password' placeholder='Password' /></div>").insertAfter('#txtEmail');
+                    $("#txtPasswd").addClass("form-control text-center input-lg center-block");
+                    $('#butLoginSignup').text("Signup");
+                }
+            }
         }
-    });
+        xmlhttp.open("GET", "validation.php?q=" + $('#txtEmail').val(), true);
+        xmlhttp.send();
+            
+   });
 });
