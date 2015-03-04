@@ -12,6 +12,10 @@
     margin-bottom: 50px;
 }
 
-input[type=email] {
+input[type=email], input[type=password] {
     max-width: 500px;
+}
+
+#butLoginSignup {
+    width: 200px;
 }

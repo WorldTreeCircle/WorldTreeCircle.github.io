@@ -1,32 +1,27 @@
 ﻿$(document).ready(function () {
-    //Create table with login textbox
-    var content = "<tr colspan='2'><td><input id='txtEmail' name='Email' type='text' value='Email' /></td></tr><tr><td colspan='2'><button><h3>Login or Signup</h3></button></td></tr>";
     //Move imgLogo from center of page to top
-    $('#imgLogo').delay(500).animate({ top: '25%' }, "slow", function () {
-        $('#sub_content').fadeIn("slow"); //fade login form into view
+    $('#imgLogo').delay(600, function () {
+        $(this).next().slideDown(600, function () {
+            $(this).next().delay(600).fadeIn(600);
+        });
     });
 
-    //Clear default text on textbox focus
-    $("input[type=text]").focus(function () {
-        if(this.value == this.name) {
-            $(this).val('');
-        }
-    })
-
-    //Insert default text when textbox loses focus and is empty
-    $("input[type=text]").blur(function () {
-        if (this.value == '') {
-            $(this).val(this.name);
-        }
-    })
-
     //Enable butLoginSignup when email is entered
-    
+    //$('#txtEmail').keyup()
 
     //Check to see if email is registered
-    $('#butLoginSignup').click(function () {
-
+    $('#butLoginSignup').click(function loginOrSignup () {
+        var email = $('#txtEmail').val();
         //Insert code to query database for email
-
-    })
+        var emailIsValid = false;
+        if (emailIsValid) {
+            //ask for password
+            console.log("email is valid");
+        }
+        else {
+            $("<div class='form-group'><label class='control-label sr-only' for='txtPasswd'>Password:</label><input id='txtPasswd' name='Password' type='password' placeholder='Password' /></div>").insertAfter('#txtEmail');
+            $("#txtPasswd").addClass("form-control text-center input-lg center-block");
+            $('#butLoginSignup').text("Signup");
+        }
+    });
 });
