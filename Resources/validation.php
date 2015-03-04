@@ -3,21 +3,21 @@
 
 $q = intval($_GET['q']);
 
-$con = mysqli_connect('localhost','fourleaf_ValEmai','validate*Email!WTC','fourleaf_wrdp1');
-if (!$con) {
-    die('Could not connect: ' . mysqli_error($con));
+$con = new mysqli('localhost','fourleaf_ValEmai','validate*Email!WTC','fourleaf_wrdp1');
+/** check connection */
+if ($con->connect_error) {
+    die('Could not connect: ' . $con->connect_error);
 }
 
-mysqli_select_db($con,"ajax_demo");
 $sql="SELECT * FROM wp_users WHERE user_email = '".$q."'";
-$result = mysqli_query($con,$sql);
+$result = $con->query($sql);
 
-if ($result) {
+if ($result->num_rows > 0) {
 	echo true;
 }
 else {
 	echo false;
 }
 
-mysqli_close($con);
+$con->close();
 ?>

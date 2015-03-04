@@ -21,7 +21,8 @@
         }
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if (xmlhttp.responseText) {
+                console.log("response = " + xmlhttp.response);
+                if (xmlhttp.responseText == true) {
                     //ask for password
                     $("<div class='form-group'><label class='control-label sr-only' for='txtPasswd'>Password:</label><input id='txtPasswd' name='Password' type='password' placeholder='Password' /></div>").insertAfter('#txtEmail');
                     $("#txtPasswd").addClass("form-control text-center input-lg center-block");
@@ -35,7 +36,7 @@
                 }
             }
         }
-        xmlhttp.open("GET", "validation.php?q=" + $('#txtEmail').val(), true);
+        xmlhttp.open("GET", "resources/validation.php?q=" + $('#txtEmail').val(), true);
         xmlhttp.send();
             
    });
