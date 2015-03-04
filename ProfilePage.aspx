@@ -3,10 +3,27 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+
+<head>
     <title>World Tree Circle</title>
 
+    <!-- Set character set -->
+    <meta charset="utf-8">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!--<!-- Start Styles -->-->
+    <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.2-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <!--Start Style Sheet-->
     <link href="stylesheets/ProfileStyleSheet.css" rel="stylesheet" />
+
+    <!--Start Java-->
+    <script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-3.3.2-dist/js/npm.js"></script>
+
 </head>
 
 
