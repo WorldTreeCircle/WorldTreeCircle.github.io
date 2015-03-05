@@ -3,13 +3,13 @@
 
 $q = intval($_GET['q']);
 
-$con = new mysqli('localhost','fourleaf_ValEmai','validate*Email!WTC','fourleaf_wrdp1');
+$con = new mysqli('localhost','fourleaf_ValEmai','validate*Email!WTC','fourleaf_wrdp1', 3306);
 /** check connection */
 if ($con->connect_error) {
     die('Could not connect: ' . $con->connect_error);
 }
 
-$sql="SELECT * FROM wp_users WHERE user_email = '".$q."'";
+$sql="SELECT * FROM wp_users.fourleaf_wrdp1 WHERE user_email = '".$q."'";
 $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
