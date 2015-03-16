@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <!-- Set character set -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>World Tree Circle</title>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-    <!--<!-- Start Styles -->-->
+    <!-- Start Styles -->
     <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="bootstrap-3.3.2-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
 
@@ -28,42 +28,47 @@
 
     <div class="container">
 
-
-        <div id="Header">
-            <h1>World Tree Circle</h1>
+        <div class="row">
+            <div id="Header" class="col-xs-12">
+                <h1>World Tree Circle <img src="images/WTC.gif" alt="World Tree Circle" style="width:50px;height:50px" /> </h1>
+                <div class=""></div>
+               
+            </div>
         </div>
-        <div id="LeftMargin">
-            Profile Pic<br />
-            Bio? <br />
-            Extra Stuff<br />
+        <div class="row">
+            <div id="LeftMargin" class="col-xs-0 col-md-2" >
+                Profile Pic<br />
+                Bio? <br />
+                Extra Stuff<br />
+            </div>
+
+            <div id="MainFeed" class="col-xs-12 col-md-0">
+                <h1>Central Feed:</h1>
+
+            </div>
+
+            <div id="MessageCenterPanel" class="col-xs-0 col-md-3">
+                <div ID="QandAPanel" class="QandAPanel">
+                    Q and A
+                </div>
+                <div ID="ScavengerHuntPanel" class="ScavengerHuntPanel">
+                    Scavenger Hunt
+                </div>
+                <div ID="CommunityPanel" class="CommunityPanel">
+                    Community
+                </div>
+                <div ID="CharitySectionPanel" class="CharitySectionPanel">
+                    Charity
+                </div>
+                <div ID="SunRayesPanel" class="SunRaysPanel">
+                    Sun Rays
+                </div>
+                <div ID="AdsPanel" class="AdsPanel">
+                    Ads
+                </div>
+            </div>
+
         </div>
-
-        <div id="MessageCenterPanel">
-            <asp:Panel ID="QandAPanel" runat="server" CssClass="QandAPanel">
-                Q and A
-            </asp:Panel>
-            <asp:Panel ID="ScavengerHuntPanel" runat="server" CssClass="ScavengerHuntPanel">
-                Scavenger Hunt
-            </asp:Panel>
-            <asp:Panel ID="CommunityPanel" runat="server" CssClass="CommunityPanel">
-                Community
-            </asp:Panel>
-            <asp:Panel ID="CharitySectionPanel" runat="server" CssClass="CharitySectionPanel">
-                Charity
-            </asp:Panel>
-            <asp:Panel ID="SunRayesPanel" runat="server" CssClass="SunRaysPanel">
-                Sun Rays
-            </asp:Panel>
-            <asp:Panel ID="AdsPanel" runat="server" CssClass="AdsPanel">
-                Ads
-            </asp:Panel>
-        </div>
-
-        <div id="MainFeed">
-            <h1>Central Feed:</h1>
-
-        </div>
-
     </div>
 
 </body>

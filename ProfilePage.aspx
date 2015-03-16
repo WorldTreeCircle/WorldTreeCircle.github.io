@@ -8,12 +8,12 @@
     <title>World Tree Circle</title>
 
     <!-- Set character set -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-    <!--<!-- Start Styles -->-->
+    <!-- Start Styles -->
     <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="bootstrap-3.3.2-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
 
