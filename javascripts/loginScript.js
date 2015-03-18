@@ -22,7 +22,7 @@
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 console.log("response = " + xmlhttp.response);
-                if (xmlhttp.responseText == true) {
+                if (xmlhttp.responseText == 'true') {
                     //ask for password
                     displayPasswordBox();
                     $('#butLoginSignup').text("Login");
@@ -35,7 +35,7 @@
         }
         xmlhttp.open("GET", "resources/validation.php?q=" + $('#txtEmail').val(), true);
         xmlhttp.send();
-            
+
     });
 
     //Navigate through signup process
@@ -70,5 +70,5 @@ function passwordStep() {
 }
 
 function displayPasswordBox() {
-    
+
 }

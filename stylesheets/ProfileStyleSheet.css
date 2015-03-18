@@ -2,7 +2,7 @@
     background-color:green;
     color:black;
     text-align:center;
-    /*padding:5px;*/
+    padding:5px;
 }
 #Body {
     background-image: url(~/WorldTreeCircle.github.io/images/WTC-black.jpg);
@@ -13,17 +13,17 @@
 #LeftMargin {
     background-color:#eeeeee;
     /*float:left;*/
-    /*padding:5px;*/	      
+    padding:5px;	      
 }
 #MainFeed {
     /*float:left;*/
-    /*padding:10px;*/
+    padding:10px;
 
 }
 #MessageCenterPanel {
     background-color:#eeeeee;
     /*float:right;*/
-    /*padding:5px;*/
+    padding:5px;
 
 }
 #QandAPanel {
