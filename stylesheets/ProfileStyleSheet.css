@@ -2,51 +2,30 @@
     background-color:green;
     color:black;
     text-align:center;
-    /*padding:5px;*/
 }
-#Body {
-    background-image: url(~/WorldTreeCircle.github.io/images/WTC-black.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position:center;
-}
+
 #LeftMargin {
-    background-color:#eeeeee;
-    /*float:left;*/
-    /*padding:5px;*/	      
+    background-color:#ebcd22;
+    font-weight:600;	      
 }
 #MainFeed {
-    /*float:left;*/
-    /*padding:10px;*/
-
+    background-color:#ddd6d6;
+    font-weight:600;
 }
 #MessageCenterPanel {
-    background-color:#eeeeee;
-    /*float:right;*/
-    /*padding:5px;*/
+    background-color:#fa0505;
+    font-weight:900;
 
 }
 #QandAPanel {
-
-    height:120px;
 }
 #ScavengerHuntPanel {
-
-    height:120px;
 }
 #CommunityPanel {
-
-    height:120px;
 }
 #CharitySectionPanel {
-
-    height:120px;
 }
 #SunRaysPanel {
-
-    height:120px;
 }
 #AdsPanel {
-
-    height:120px;
 }
