@@ -46,13 +46,13 @@
             </div>
         </div>
         <div class="row">
-            <div id="LeftMargin" class="hidden-xs col-sm-2">
+            <div id="LeftMargin" class="hidden-xs col-sm-2" ng-show="showleftcol" ng-swipe-left="showleftcol = false">
                 Profile Pic<br />
                 Bio? <br />
                 Extra Stuff<br />
             </div>
 
-            <div id="MainFeed" class="col-xs-12 col-sm-7">
+            <div id="MainFeed" class="col-xs-12 col-sm-7" ng-show="!showleftcol" ng-swipe-right="showleftcol = true">
                 <h1>Central Feed:</h1>
                 This is where the main feed would go.<br />
 
