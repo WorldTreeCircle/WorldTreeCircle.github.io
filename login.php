@@ -35,13 +35,14 @@
                 <div id="divWTC" class="spacer50" hidden>
                     <h1 class="text-center">World Tree Circle</h1>
                 </div>
-                <form id="frmLogin" role="form" hidden>
+                <form id="frmLogin" action="includes/process_login.php" method="post" role="form" hidden>
                     <div id="userEmail" class="form-group">
                         <label class="control-label sr-only" for="txtEmail">Email:</label>
                         <input id='txtEmail' name='Email' type='email' placeholder='Email' class="form-control text-center input-lg center-block" />
                     </div>
                     <div id="frmButton" class="form-group">
-                        <button type="button" id="butLoginSignup" class="btn-lg btn-success center-block text-center">Login or Signup</button>
+							<button type="button" id="butLogin" class="btn-lg btn-success center-block text-center">Login</button>
+							<button type="button" id="butRegister" class="btn-md btn-warning pull-right text-center">Register</button>
                     </div>
                 </form>
             </div>
