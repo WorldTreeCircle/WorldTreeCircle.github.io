@@ -1,5 +1,6 @@
-﻿<?php
-include_once 'psl-config.php';
+<?php
+include_once 'psl-config-select.php';
+include_once 'psl-config-insert.php';
 
 function sec_session_start() {
     $session_name = 'sec_session_id';   // Set a custom session name
@@ -24,9 +25,9 @@ function sec_session_start() {
     session_regenerate_id(true);    // regenerated the session, delete the old one. 
 }
 
-function login($email, $password, $mysqli) {
+function login($email, $password, $mysqli_select, $mysqli_insert) {
     // Using prepared statements means that SQL injection is not possible. 
-    if ($stmt = $mysqli->prepare("SELECT id, username, password, salt 
+    if ($stmt = $mysqli_select->prepare("SELECT id, username, password, salt 
         FROM members
        WHERE email = ?
         LIMIT 1")) {
@@ -71,7 +72,7 @@ function login($email, $password, $mysqli) {
                     // Password is not correct
                     // We record this attempt in the database
                     $now = time();
-                    $mysqli->query("INSERT INTO login_attempts(user_id, time)
+                    $mysqli_insert->query("INSERT INTO login_attempts(user_id, time)
                                     VALUES ('$user_id', '$now')");
                     return false;
                 }
@@ -83,14 +84,14 @@ function login($email, $password, $mysqli) {
     }
 }
 
-function checkbrute($user_id, $mysqli) {
+function checkbrute($user_id, $mysqli_select) {
     // Get timestamp of current time 
     $now = time();
  
     // All login attempts are counted from the past 2 hours. 
     $valid_attempts = $now - (2 * 60 * 60);
  
-    if ($stmt = $mysqli->prepare("SELECT time 
+    if ($stmt = $mysqli_select->prepare("SELECT time 
                              FROM login_attempts 
                              WHERE user_id = ? 
                             AND time > '$valid_attempts'")) {
