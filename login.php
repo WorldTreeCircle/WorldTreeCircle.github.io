@@ -1,9 +1,8 @@
 <?php
-	include_once 'includes/db_connect.php';
 	include_once 'includes/functions.php';
- 
+
 	sec_session_start();
- 
+
 	if (login_check($mysqli) == true) {
 		$logged = 'in';
 	} else {
@@ -18,7 +17,7 @@
 
     <!-- Set viewport and scale (mobile friendly) -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!--Web Page Title-->
     <title>World Tree Circle</title>
 
