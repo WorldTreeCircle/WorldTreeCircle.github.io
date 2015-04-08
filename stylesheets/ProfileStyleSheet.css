@@ -4,13 +4,19 @@
     text-align:center;
 }
 
+body {
+  background-color: green;
+  height: 100%;
+}
+
 #LeftMargin {
     background-color:#ebcd22;
-    font-weight:600;	      
+    font-weight:600;
 }
 #MainFeed {
-    background-color:#ddd6d6;
+    background: rgba(255,255,255,0.75);
     font-weight:600;
+    height: 100%;
 }
 #MessageCenterPanel {
     background-color:#fa0505;

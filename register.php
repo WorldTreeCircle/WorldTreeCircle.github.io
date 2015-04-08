@@ -10,7 +10,7 @@ include_once 'includes/functions.php';
 
     <!-- Set viewport and scale (mobile friendly) -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!--Web Page Title-->
     <title>World Tree Circle | Register</title>
 
@@ -32,7 +32,7 @@ include_once 'includes/functions.php';
 	<script src="javascripts/forms.js" type="text/javascript"></script>
 	<script src="javascripts/sha512.js" type="text/javascript"></script>
     <!-- End JavaScript -->
-    <script type="text/JavaScript" src="javascripts/sha512.js"></script> 
+    <script type="text/JavaScript" src="javascripts/sha512.js"></script>
     <script type="text/JavaScript" src="javascripts/forms.js"></script>
     </head>
     <body>
@@ -50,27 +50,27 @@ include_once 'includes/functions.php';
 					?>
 					<form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form" role="form">
 						<div class="form-group">
-							
+
 							<label class="control-label sr-only" for="txtUsername">Username:</label>
 							<input id='txtUsername' name='username' type="email" placeholder='Username' class="form-control text-center input-lg center-block" />
 						</div>
-						<div class="form-group">							
+						<div class="form-group">
 							<label class="control-label sr-only" for="txtEmail">Email:</label>
-							<input id='txtEmail' name='email' type='email' placeholder='Email' class="form-control text-center input-lg center-block" />
+							<input id='txtEmail' name='Email' type='Email' placeholder='Email' class="form-control text-center input-lg center-block" />
 						</div>
-						<div class="form-group">						
+						<div class="form-group">
 							<input id='txtPassword' name='password' type='password' placeholder='Password' class='form-control text-center input-lg center-block' />
 						</div>
-						<div class="form-group">								
+						<div class="form-group">
 							<input id='txtConfirmPassword' name='confirmpwd' type='password' placeholder='Confirm Password' class='form-control text-center input-lg center-block' />
 						</div>
 						<div class="form-group">
-							<button type="button" id="butLogin" class="btn-lg btn-success center-block text-center" onclick="return regformhash(this.form, this.form.username, this.form.email, this.form.password, this.form.confirmpwd);">Register</button>
+							<button type="button" id="butLogin" class="btn-lg btn-success center-block text-center" onclick="return regformhash(this.form, this.form.username, this.form.Email, this.form.password, this.form.confirmpwd);">Register</button>
 						</div>
 						<div class="form-group">
 							<a class="btn-md btn-link pull-left text-center" href="login">Login</a>
 						</div>
-							    
+
 					</form>
 				</div>
 			</div>
