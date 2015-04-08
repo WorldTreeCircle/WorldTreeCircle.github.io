@@ -65,7 +65,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
         // Create salted password 
         $password = hash('sha512', $password . $random_salt);
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli_insert->prepare("INSERT INTO users (username, email, password, salt) VALUES (?, ?, ?, ?)")) {
+        if ($insert_stmt = $mysqli_insert->prepare("INSERT INTO 'users' ('username', 'email', 'password', 'salt') VALUES (?, ?, ?, ?)")) {
             $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
             // Execute the prepared query.
             if (!$insert_stmt->execute()) {
@@ -73,7 +73,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
                 exit();
             }
         }
-        header('Location: ./ProfilePage.html');
+        header('Location: ./login?msg=2');
         exit();
     }
 }

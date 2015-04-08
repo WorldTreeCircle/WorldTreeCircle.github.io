@@ -44,7 +44,17 @@
     <div id="main_content" class="container">
 		<?php
 			if(isset($_GET['error'])) {
-				echo '<div class="alert alert-danger text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbspLogin failed</div>';
+				echo '<div class="alert alert-danger text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbsp' . $_GET['error'] . '</div>';
+			}
+			if(isset($_GET['msg'])) {
+				if($_GET['msg'] == 1) {
+					//Successful logout
+					echo '<div class="alert alert-info text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbspYou have successfully logged out!</div>';
+				}
+				if($_GET['msg'] == 2) {
+					//Successful register
+					echo '<div class="alert alert-info text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbspYou have successfully registered!<br />Now you can log in!</div>';
+				}
 			}
 		?>
         <div class="row">
