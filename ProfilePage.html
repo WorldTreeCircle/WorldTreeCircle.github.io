@@ -32,49 +32,62 @@
 
 <body id="Body">
 
-    <script>
-        var app = angular.module('app', ['ngTouch']);
-    </script>
-
     <div class="container-fluid">
-
         <div class="row">
             <div id="Header" class="col-xs-12">
                 <h1>World Tree Circle <img src="images/WTC.gif" alt="World Tree Circle" style="width:50px;height:50px" /> </h1>
                 <div class=""></div>
-               
+
             </div>
         </div>
         <div class="row">
-            <div id="LeftMargin" class="hidden-xs col-sm-2" ng-show="showleftcol" ng-swipe-left="showleftcol = false">
-                Profile Pic<br />
-                Bio? <br />
-                Extra Stuff<br />
+            <div id="LeftColumn" class="hidden-xs col-sm-2">
+                <div id="ProfilePicPanel" class="ProfilePicPanel">
+                    <img style="width:100%;height:100%" alt="Paws" src="images/Paws%20(Pic%20Example).jpeg" />
+                </div>
+                <br />
+                <div id="ProfileBio" class="ProfileBio">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <br />
+                <div id="ExtraStuff" class="ExtraStuff">
+                Extra Stuff
+                </div><br />
             </div>
 
-            <div id="MainFeed" class="col-xs-12 col-sm-7" ng-show="!showleftcol" ng-swipe-right="showleftcol = true">
+            <div id="MainFeed" class="col-xs-12 col-sm-7">
                 <h1>Central Feed:</h1>
                 This is where the main feed would go.<br />
 
             </div>
 
             <div id="MessageCenterPanel" class="hidden-xs col-sm-3">
-                <div ID="QandAPanel" class="QandAPanel">
+                <div id="QandAPanel" class="QandAPanel">
                     Q and A
-                </div>
-                <div ID="ScavengerHuntPanel" class="ScavengerHuntPanel">
+                    <a href="Http://worldtreecircle.net/QA" >
+                    Question and Answer!
+                    </a>
+                       </div>
+                <div id="ScavengerHuntPanel" class="ScavengerHuntPanel">
                     Scavenger Hunt
                 </div>
-                <div ID="CommunityPanel" class="CommunityPanel">
+                <div id="CommunityPanel" class="CommunityPanel">
                     Community
                 </div>
-                <div ID="CharitySectionPanel" class="CharitySectionPanel">
+                <div id="CharitySectionPanel" class="CharitySectionPanel">
                     Charity
                 </div>
-                <div ID="SunRayesPanel" class="SunRaysPanel">
+                <div id="SunRayesPanel" class="SunRaysPanel">
                     Sun Rays
                 </div>
-                <div ID="AdsPanel" class="AdsPanel">
+                <div id="AdsPanel" class="AdsPanel">
                     Ads
                 </div>
             </div>
