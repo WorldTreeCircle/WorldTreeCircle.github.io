@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include_once 'functions.php';
 sec_session_start();
  
@@ -18,4 +18,4 @@ setcookie(session_name(),
  
 // Destroy session 
 session_destroy();
-header('Location: ../index.php');
+header('Location: ../login?msg=1');

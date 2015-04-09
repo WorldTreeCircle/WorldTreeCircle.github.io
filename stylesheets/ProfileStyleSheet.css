@@ -3,6 +3,7 @@
     color:black;
     text-align:center;
 }
+<<<<<<< HEAD
 #Body {
     background-image: url(http://localhost:61203/images/WTC.gif);
     background-repeat: no-repeat;
@@ -10,15 +11,30 @@
     background-size: inherit;
 }
 #LeftColumn {
+=======
+
+body {
+  background-color: green;
+  height: 100%;
+}
+
+#LeftMargin {
+>>>>>>> origin/master
     background-color:#ebcd22;
-    font-weight:600;	      
+    font-weight:600;
 }
 #MainFeed {
+<<<<<<< HEAD
     background-color:white;
     opacity:0.7;
     font-weight:600;
     resize:vertical;
     overflow:auto;
+=======
+    background: rgba(255,255,255,0.75);
+    font-weight:600;
+    height: 100%;
+>>>>>>> origin/master
 }
 #MessageCenterPanel {
     background-color:#fa0505;

@@ -1,5 +1,6 @@
-﻿<?php
-include_once 'psl-config.php';
+<?php
+include_once 'psl-config-select.php';
+include_once 'psl-config-insert.php';
 
 function sec_session_start() {
     $session_name = 'sec_session_id';   // Set a custom session name
@@ -24,12 +25,9 @@ function sec_session_start() {
     session_regenerate_id(true);    // regenerated the session, delete the old one. 
 }
 
-function login($email, $password, $mysqli) {
+function login($email, $password, $mysqli_select, $mysqli_insert) {
     // Using prepared statements means that SQL injection is not possible. 
-    if ($stmt = $mysqli->prepare("SELECT id, username, password, salt 
-        FROM members
-       WHERE email = ?
-        LIMIT 1")) {
+    if ($stmt = $mysqli_select->prepare("SELECT `id`, `password`, `salt`, `username` FROM `users` WHERE `email` = ? LIMIT 1")) {
         $stmt->bind_param('s', $email);  // Bind "$email" to parameter.
         $stmt->execute();    // Execute the prepared query.
         $stmt->store_result();
@@ -44,10 +42,10 @@ function login($email, $password, $mysqli) {
             // If the user exists we check if the account is locked
             // from too many login attempts 
  
-            if (checkbrute($user_id, $mysqli) == true) {
+            if (checkbrute($user_id, $mysqli_select) == true) {
                 // Account is locked 
                 // Send an email to user saying their account is locked
-                return false;
+                return 'checkbrute';
             } else {
                 // Check if the password in the database matches
                 // the password the user submitted.
@@ -71,29 +69,29 @@ function login($email, $password, $mysqli) {
                     // Password is not correct
                     // We record this attempt in the database
                     $now = time();
-                    $mysqli->query("INSERT INTO login_attempts(user_id, time)
+                    $mysqli_insert->query("INSERT INTO 'login_attempts' ('user_id', 'time')
                                     VALUES ('$user_id', '$now')");
-                    return false;
+                    return 'Incorrect password!';
                 }
             }
         } else {
             // No user exists.
-            return false;
+            return 'User does not exist!';
         }
     }
 }
 
-function checkbrute($user_id, $mysqli) {
+function checkbrute($user_id, $mysqli_select) {
     // Get timestamp of current time 
     $now = time();
  
     // All login attempts are counted from the past 2 hours. 
     $valid_attempts = $now - (2 * 60 * 60);
  
-    if ($stmt = $mysqli->prepare("SELECT time 
-                             FROM login_attempts 
-                             WHERE user_id = ? 
-                            AND time > '$valid_attempts'")) {
+    if ($stmt = $mysqli_select->prepare("SELECT 'time' 
+                             FROM 'login_attempts' 
+                             WHERE 'user_id' = ? 
+                            AND 'time' > '$valid_attempts'")) {
         $stmt->bind_param('i', $user_id);
  
         // Execute the prepared query. 
@@ -109,7 +107,7 @@ function checkbrute($user_id, $mysqli) {
     }
 }
 
-function login_check($mysqli) {
+function login_check($mysqli_select) {
     // Check if all session variables are set 
     if (isset($_SESSION['user_id'], 
                         $_SESSION['username'], 
@@ -122,9 +120,9 @@ function login_check($mysqli) {
         // Get the user-agent string of the user.
         $user_browser = $_SERVER['HTTP_USER_AGENT'];
  
-        if ($stmt = $mysqli->prepare("SELECT password 
-                                      FROM members 
-                                      WHERE id = ? LIMIT 1")) {
+        if ($stmt = $mysqli_select->prepare("SELECT 'password' 
+                                      FROM 'users' 
+                                      WHERE 'id' = ? LIMIT 1")) {
             // Bind "$user_id" to parameter. 
             $stmt->bind_param('i', $user_id);
             $stmt->execute();   // Execute the prepared query.
