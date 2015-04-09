@@ -63,16 +63,19 @@ if (isset($_POST['username'], $_POST['Email'], $_POST['p'])) {
         $random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE));
         // Create salted password
         $password = hash('sha512', $password . $random_salt);
+
         // Insert the new user into the database
-        if ($insert_stmt = $mysqli_insert->prepare("INSERT INTO 'users' ('username', 'email', 'password', 'salt') VALUES (?, ?, ?, ?)")) {
+        if ($insert_stmt = $mysqli_insert->prepare("INSERT INTO users (username, email, password, salt) VALUES (?,?,?,?)")) {
             $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
             // Execute the prepared query.
-            if (!$insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
-                exit();
+            if($insert_stmt->execute()) {
+              header('Location: ../login?msg=2');
             }
+        } else {
+          $m_err = $mysqli_insert->error;
+          $s_err = $insert_stmt->error;
+          header('Location: ../error.php?err=' . $m_err);
         }
-        header('Location: ./login?msg=2');
         exit();
     }
 }
