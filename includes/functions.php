@@ -45,7 +45,7 @@ function login($email, $password, $mysqli_select, $mysqli_insert) {
             if (checkbrute($user_id, $mysqli_select) == true) {
                 // Account is locked
                 // Send an email to user saying their account is locked
-                return 'Account is locked';
+                return 'checkbrute';
             } else {
                 // Check if the password in the database matches
                 // the password the user submitted.
@@ -69,8 +69,8 @@ function login($email, $password, $mysqli_select, $mysqli_insert) {
                     // Password is not correct
                     // We record this attempt in the database
                     $now = time();
-                    $mysqli_insert->query("INSERT INTO `login_attempts` (`user_id`, `time`)
-                                    VALUES (`$user_id`, `$now`)");
+                    $mysqli_insert->query("INSERT INTO 'login_attempts' ('user_id', 'time')
+                                    VALUES ('$user_id', '$now')");
                     return 'Incorrect password!';
                 }
             }
@@ -88,10 +88,10 @@ function checkbrute($user_id, $mysqli_select) {
     // All login attempts are counted from the past 2 hours.
     $valid_attempts = $now - (2 * 60 * 60);
 
-    if ($stmt = $mysqli_select->prepare("SELECT `time`
-                             FROM `login_attempts`
-                             WHERE `user_id`= ?
-                            AND `time` > `$valid_attempts`")) {
+    if ($stmt = $mysqli_select->prepare("SELECT 'time'
+                             FROM 'login_attempts'
+                             WHERE 'user_id' = ?
+                            AND 'time' > '$valid_attempts'")) {
         $stmt->bind_param('i', $user_id);
 
         // Execute the prepared query.
@@ -120,7 +120,9 @@ function login_check($mysqli_select) {
         // Get the user-agent string of the user.
         $user_browser = $_SERVER['HTTP_USER_AGENT'];
 
-        if ($stmt = $mysqli_select->prepare("SELECT `password` FROM `users` WHERE `id` = ? LIMIT 1")) {
+        if ($stmt = $mysqli_select->prepare("SELECT 'password'
+                                      FROM 'users'
+                                      WHERE 'id' = ? LIMIT 1")) {
             // Bind "$user_id" to parameter.
             $stmt->bind_param('i', $user_id);
             $stmt->execute();   // Execute the prepared query.

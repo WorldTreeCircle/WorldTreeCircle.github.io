@@ -13,7 +13,7 @@ if (isset($_POST['Email'], $_POST['p'])) {//test for POST email and p variables
 
     if ($status === true) {
         // Login success
-        header('Location: ../ProfilePage');
+        header('Location: ../ProfilePage.html');
     } else {
         // Login failed
         header('Location: ../login?error=' . $status);

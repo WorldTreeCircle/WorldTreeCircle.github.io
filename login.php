@@ -1,11 +1,9 @@
 <?php
-	ob_start();
 	include_once 'includes/functions.php';
-	include_once 'includes/db_connect_select.php';
 
 	sec_session_start();
 
-	if (login_check($mysqli_select) == true) {
+	if (login_check($mysqli) == true) {
 		$logged = 'in';
 	} else {
 		$logged = 'out';
@@ -49,19 +47,13 @@
 				echo '<div class="alert alert-danger text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbsp' . $_GET['error'] . '</div>';
 			}
 			if(isset($_GET['msg'])) {
-				switch ($_GET['msg']) {
-					case 1:
-						//Successful logout
-						echo '<div class="alert alert-info text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbspYou have successfully logged out!</div>';
-						break;
-					case 2:
-						//Successful register
-						echo '<div class="alert alert-info text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbspYou have successfully registered!<br />Now you can log in!</div>';
-						break;
-					case 3:
-						//Successful register
-						echo '<div class="alert alert-danger text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbspPlease login first!</div>';
-						break;
+				if($_GET['msg'] == 1) {
+					//Successful logout
+					echo '<div class="alert alert-info text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbspYou have successfully logged out!</div>';
+				}
+				if($_GET['msg'] == 2) {
+					//Successful register
+					echo '<div class="alert alert-info text-center" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>&nbspYou have successfully registered!<br />Now you can log in!</div>';
 				}
 			}
 		?>
